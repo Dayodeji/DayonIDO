@@ -1,0 +1,51 @@
+Product Requirement Document (PRD)
+
+Product Name:
+DayonIDO – Blockchain Geospatial Gaming IDO Platform
+
+Purpose:
+Enable users to participate in an Initial DEX Offering (IDO) for Token A by purchasing it with Token B, leveraging a secure smart contract and a modern web interface. The platform supports wallet connection, transaction status feedback, and community engagement.
+
+Features:
+1. Smart Contract
+- Users can buy Token A (0xcB1FFB30ee3774Ff9d899bF633F0cEe5bDC373c8) using Token B (0xDd7639e3920426de6c59A1009C7ce2A9802d0920).
+- Configurable exchange rate (owner can set rate).
+- Owner can withdraw unsold Token A and collected Token B.
+- Emits events for purchases.
+
+2. Web Application
+- Connect MetaMask wallet and switch to Sepolia testnet.
+- Display IDO interface for purchasing Token A.
+- Show transaction status (pending, success, error).
+- Display community, games, and vision sections.
+- Responsive, modern UI using Tailwind CSS.
+
+3. Security
+- Uses OpenZeppelin contracts for ERC20 standards and ownership.
+- Validates user input and contract state.
+- Requires user approval for Token B transfers.
+
+User Stories:
+- As a user, I want to connect my wallet and buy Token A with Token B.
+- As a user, I want to see the status of my transaction.
+- As an owner, I want to set the exchange rate and withdraw tokens.
+- As a visitor, I want to learn about the platform’s vision and community.
+
+Technical Requirements:
+- Solidity smart contract (ERC20 compatible, Ownable).
+- Next.js frontend with React and Tailwind CSS.
+- Ethers.js for blockchain interaction.
+- Hardhat for local development and testing.
+- OpenZeppelin for secure contract standards.
+
+Acceptance Criteria:
+- Users can successfully buy Token A with Token B.
+- Owner can set rate and withdraw tokens.
+- UI displays transaction status and feedback.
+- Contract passes all local tests.
+- No critical vulnerabilities in dependencies.
+
+Out of Scope:
+- Fiat payments.
+- Cross-chain swaps.
+- Advanced KYC/AML.
